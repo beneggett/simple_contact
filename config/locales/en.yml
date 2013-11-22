@@ -1,0 +1,15 @@
+en:
+  contact_me:                             "Contact Me"
+  get_in_touch:                           "Get in touch"
+
+  email_address_label:                    "Email Address"
+  email_address_placeholder:              "Please enter your email address"
+  email_name_label:                       "Your Name"
+  email_name_placeholder:                 "Please enter your full name"
+  email_subject_label:                    "Email Subject"
+  email_subject_placeholder:              "Tell us what you want to know about"
+  email_body_label:                       "Message"
+  email_body_placeholder:                 "Please write your message..."
+  message_errors_present:                 "Please correct the following errors"
+  mailer_success_message:                 "Thanks for contacting us. We'll be in touch soon!"
+  mailer_error_message:                   "Please correct the errors below"
