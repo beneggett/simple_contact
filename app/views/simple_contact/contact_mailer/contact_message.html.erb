@@ -1,0 +1,9 @@
+<h3> You've received a new message from: <%= mail_to @message.email, @message.name %> </h3>
+<hr />
+<h3> <%=@message.subject %> </h3>
+
+<%= simple_format(@message.body) %>
+
+<hr />
+
+<p> Please respond to them within the next 24 hours </p>
