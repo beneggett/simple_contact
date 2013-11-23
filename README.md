@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/beneggett/simple_contact.png?branch=master)](https://travis-ci.org/beneggett/simple_contact) [![Code Climate](https://codeclimate.com/github/beneggett/simple_contact.png)](https://codeclimate.com/github/beneggett/simple_contact)  
+[![Gem Version](https://badge.fury.io/rb/simple_contact.png)](http://badge.fury.io/rb/simple_contact) [![Build Status](https://travis-ci.org/beneggett/simple_contact.png?branch=master)](https://travis-ci.org/beneggett/simple_contact) [![Coverage Status](https://coveralls.io/repos/beneggett/simple_contact/badge.png)](https://coveralls.io/r/beneggett/simple_contact)
+ [![Code Climate](https://codeclimate.com/github/beneggett/simple_contact.png)](https://codeclimate.com/github/beneggett/simple_contact)   
 
 # Simple Contact
 
