@@ -1,5 +1,3 @@
-module SimpleContact
-  class Engine < ::Rails::Engine
-    isolate_namespace SimpleContact
-  end
+class SimpleContact::Engine < ::Rails::Engine
+  isolate_namespace SimpleContact
 end

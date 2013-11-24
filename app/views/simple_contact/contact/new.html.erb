@@ -1,31 +1,56 @@
-<div class='page-header'>
+<div class="page-header">
   <h1>
       <%= t(:contact_me) %>
-      <small> <%= t(:get_in_touch) %></small>
   </h1>
-  <%= form_for @message, url: simple_contact.contact_path do |f| %>
-    <% if @message.errors.any? %>
-      <p><%= t(:message_errors_present) %></p>
-      <ul>
-        <% @message.errors.full_messages.each do |error| %>
-          <li><%= error %></li>
+</div>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+      <%= form_for @message, url: simple_contact.contact_path, html: {class: "form-horizontal" } do |f| %>
+        <% if @message.errors.any? %>
+          <script>
+          $(document).ready(function() {
+              $('.field_with_errors').parent().addClass('has-error');
+          });
+          </script>
+          <p><%= t(:message_errors_present) %></p>
+          <ul class='list-unstyled'>
+            <% @message.errors.full_messages.each do |error| %>
+              <li><%= error %></li>
+            <% end %>
+          </ul>
         <% end %>
-      </ul>
-    <% end %>
-    <div class="form-inputs">
-      <%= f.label :email, "#{t(:email_address_label)}" %>
-      <%= f.text_field :email, placeholder: "#{t(:email_address_placeholder)}" %> <br />
-      <%= f.label :name, "#{t(:email_name_label)}" %>
-      <%= f.text_field :name, placeholder: "#{t(:email_name_placeholder)}" %> <br />
-      <%= f.label :subject, "#{t(:email_subject_label)}" %>
-      <%= f.text_field :subject, placeholder: "#{t(:email_subject_placeholder)}" %> <br />
-      <%= f.label :body, "#{t(:email_body_label)}" %>
-      <%= f.text_area :body, placeholder: "#{t(:email_body_placeholder)}", as: :text, input_html: {rows: 8} %> <br />
+        <div class="form-inputs">
+          <div class="form-group">
+            <%= f.label :email, t(:email_address_label).html_safe, class: "col-xs-2 control-label" %>
+            <div class="col-xs-10">
+              <%= f.email_field :email, placeholder: t(:email_address_placeholder).html_safe, class: "form-control" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :name, t(:email_name_label).html_safe, class: "col-xs-2 control-label" %>
+            <div class="col-xs-10">
+              <%= f.text_field :name, placeholder: t(:email_name_placeholder).html_safe, class: "form-control" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :subject, t(:email_subject_label).html_safe, class: "col-xs-2 control-label" %>
+            <div class="col-xs-10">
+              <%= f.text_field :subject, placeholder: t(:email_subject_placeholder).html_safe, class: "form-control" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :body, t(:email_body_label).html_safe, class: "col-xs-2 control-label" %>
+            <div class="col-xs-10">
+              <%= f.text_area :body, placeholder: t(:email_body_placeholder).html_safe, as: :text, rows: 10, class: "form-control" %>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="text-center">
+          <button name='commit' class='btn btn-primary btn-lg'><%= t(:submit_message).html_safe %></button>
+        </div>
+      <% end %>
     </div>
-    <br />
-    <div class='text-center'>
-      <%= f.submit :submit, class: 'btn btn-primary' %>
-    </div>
-  <% end %>
+  </div>
 </div>
 
