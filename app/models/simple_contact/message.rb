@@ -19,3 +19,4 @@ class SimpleContact::Message
     false
   end
 end
+
