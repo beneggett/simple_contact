@@ -29,7 +29,21 @@ Simply mount it within your application's routes file where you want your contac
 mount SimpleContact::Engine => "/contact-me"
 ```
 
-Make sure you have an actionmailer method setup in your environment.
+Make sure you have an Action Mailer method setup in your environment.
+
+Simple Contact uses Environment variables to setup your email's to, cc, bcc, and subject prefix lines
+You can set them by simply setting environmant variables within your own app:
+
+```
+ENV['SIMPLE_CONTACT_TO_EMAIL'] = 'to_me@example.com'
+ENV['SIMPLE_CONTACT_CC_EMAIL'] = 'cc_me@example.com, cc_me2@example.com'
+ENV['SIMPLE_CONTACT_BCC_EMAIL'] = 'bcc_me@example.com, bcc_me2@example.com'
+ENV['SIMPLE_CONTACT_SUBJECT_PREFIX'] = "[Simple Contact]"
+```
+
+## Customization
+
+Simple Contact messaging is entirely translated. The messages can all be overriden by standard conventions as described in [Rails I18n Guides](http://guides.rubyonrails.org/i18n.html)
 
 
 ## Contributing
