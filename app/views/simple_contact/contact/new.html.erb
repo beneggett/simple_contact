@@ -26,14 +26,14 @@
           <% end %>
 
           <%# Message fields below %>
-          <div class="form-group <%= 'has-error' if @message.errors.present? %>">
+          <div class="form-group <%= 'has-error' if @message.errors.include?(:name) %>">
             <%= f.label :name, t(:email_name_label).html_safe, class: "col-xs-2 control-label" %>
             <div class="col-xs-10">
               <%= f.text_field :name, placeholder: t(:email_name_placeholder).html_safe, class: "form-control" %>
             </div>
           </div>
 
-          <div class="form-group <%= 'has-error' if @message.errors.present? %>">
+          <div class="form-group <%= 'has-error' if @message.errors.include?(:email) %>">
             <%= f.label :email, t(:email_address_label).html_safe, class: "col-xs-2 control-label" %>
             <div class="col-xs-10">
               <%= f.email_field :email, placeholder: t(:email_address_placeholder).html_safe, class: "form-control" %>
@@ -41,14 +41,14 @@
           </div>
 
 
-          <div class="form-group <%= 'has-error' if @message.errors.present? %>">
+          <div class="form-group <%= 'has-error' if @message.errors.include?(:subject) %>">
             <%= f.label :subject, t(:email_subject_label).html_safe, class: "col-xs-2 control-label" %>
             <div class="col-xs-10">
               <%= f.text_field :subject, placeholder: t(:email_subject_placeholder).html_safe, class: "form-control" %>
             </div>
           </div>
 
-          <div class="form-group <%= 'has-error' if @message.errors.present? %>">
+          <div class="form-group <%= 'has-error' if @message.errors.include?(:body) %>">
             <%= f.label :body, t(:email_body_label).html_safe, class: "col-xs-2 control-label" %>
             <div class="col-xs-10">
               <%= f.text_area :body, placeholder: t(:email_body_placeholder).html_safe, as: :text, rows: 10, class: "form-control" %>
