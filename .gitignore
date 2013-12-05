@@ -6,3 +6,7 @@ pkg/
 test/dummy/log/*.log
 test/dummy/tmp/
 test/dummy/.sass-cache
+
+.ruby-version
+.ruby-gemset
+
