@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    simple_contact (0.0.9)
+    simple_contact (0.0.10)
       rails (~> 3.2.15)
 
 GEM
