@@ -53,3 +53,7 @@ Simple Contact messaging is entirely translated. The messages can all be overrid
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/beneggett/simple_contact/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
